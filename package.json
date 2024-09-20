@@ -26,10 +26,8 @@
 		"typescript": "^5.5.4",
 		"typescript-coverage-report": "^1.0.0"
 	},
-	"module": "index.ts",
 	"name": "next-starter",
 	"packageManager": "bun@1.0.27",
-	"private": true,
 	"scripts": {
 		"build": "next build",
 		"clear": "rm -rf .next .turbo node_modules",
