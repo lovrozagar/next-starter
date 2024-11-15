@@ -15,7 +15,12 @@
 		"editor.defaultFormatter": "biomejs.biome"
 	},
 	"editor.codeActionsOnSave": {
-		"source.fixAll": "explicit"
+		"quickfix.biome": "explicit",
+		"source.fixAll": "explicit",
+		"source.fixAll.biome": "explicit",
+		"source.fixAll.ts": "explicit",
+		"source.organizeImports.biome": "explicit",
+		"source.removeUnusedImports.ts": "explicit"
 	},
 	"editor.defaultFormatter": "biomejs.biome",
 	"editor.formatOnPaste": false,
@@ -24,12 +29,15 @@
 	"editor.quickSuggestions": {
 		"strings": true
 	},
+	"explorer.confirmDragAndDrop": true,
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
 	"files.encoding": "utf8",
 	"files.insertFinalNewline": true,
 	"files.trimTrailingWhitespace": true,
 	"javascript.preferences.importModuleSpecifier": "non-relative",
 	"javascript.updateImportsOnFileMove.enabled": "always",
-	"prettier.useEditorConfig": true,
 	"search.exclude": {
 		"**/package-lock.json": true,
 		"**/pnpm-lock.yaml": true,
@@ -45,7 +53,8 @@
 	"typescript.suggest.autoImports": true,
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"typescript.updateImportsOnFileMove.enabled": "always",
-	"files.associations": {
-		"*.css": "tailwindcss"
+	"workbench.colorCustomizations": {
+		"minimap.background": "#00000000",
+		"scrollbar.shadow": "#00000000"
 	}
 }
