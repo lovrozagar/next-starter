@@ -2,6 +2,8 @@
 **/node_modules/
 
 # build
+**/.next/
+**/.turbo/
 **/dist/
 **/dist-ssr/
 **/build/

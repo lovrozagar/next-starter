@@ -13,8 +13,6 @@ jobs:
   setup:
     name: Setup Environment
     runs-on: ubuntu-latest
-    outputs:
-      cache-hit: ${{ steps.cache.outputs.cache-hit }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.1.1
@@ -23,21 +21,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 21
-          cache: "npm"
+          check-latest: true
 
       - name: Set up Bun
         uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
-
-      - name: Cache dependencies
-        id: cache
-        uses: actions/cache@v3
-        with:
-          path: .bun
-          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lockb') }}
-          restore-keys: |
-            ${{ runner.os }}-bun-
 
       - name: Install dependencies
         run: bun install --ci
@@ -84,7 +73,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 21
-          cache: "npm"
+          check-latest: true
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
 
       - name: Install dependencies
         run: bun install --ci
