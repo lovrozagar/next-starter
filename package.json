@@ -39,6 +39,7 @@
 	"packageManager": "bun@1.0.27",
 	"private": true,
 	"scripts": {
+		"alias:load": "source local-aliases.sh",
 		"build": "next build",
 		"bundlesize:check": "bunx bundlewatch --config bundlewatch.config.json",
 		"clear": "rimraf .next .turbo node_modules",
