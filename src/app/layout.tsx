@@ -1,6 +1,6 @@
+import { TopLoaderDynamic } from "@/components/top-loader"
 import "@/style/globals.css"
 
-import NextTopLoader from "nextjs-toploader"
 import type { ReactNode } from "react"
 
 type RootLayoutProps = {
@@ -13,7 +13,7 @@ function RootLayout(props: RootLayoutProps) {
 	return (
 		<html lang="en">
 			<body>
-				<NextTopLoader showSpinner={false} />
+				<TopLoaderDynamic />
 				{children}
 			</body>
 		</html>
