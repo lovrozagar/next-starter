@@ -5,7 +5,8 @@
 		"nextjs-toploader": "^1.6.12",
 		"react": "^18",
 		"react-dom": "^18",
-		"superstruct": "^2.0.2",
+		"schema-dts": "^1.1.2",
+		"zod": "^3.23.8",
 		"zustand": "^4.5.4"
 	},
 	"devDependencies": {
@@ -31,7 +32,7 @@
 		"rimraf": "^6.0.1",
 		"semantic-release": "^24.2.0",
 		"tailwindcss": "^3.4.1",
-		"turbo": "^2.0.9",
+		"turbo": "latest",
 		"typescript": "^5.5.4",
 		"typescript-coverage-report": "^1.0.0"
 	},
@@ -40,6 +41,7 @@
 	"private": true,
 	"scripts": {
 		"alias:load": "source local-aliases.sh",
+		"analyze": "turbo analyze",
 		"build": "next build",
 		"bundlesize:check": "bunx bundlewatch --config bundlewatch.config.json",
 		"clear": "rimraf .next .turbo node_modules",
@@ -61,9 +63,14 @@
 		"start": "next start",
 		"type:check": "tsc --noEmit",
 		"type:coverage": "typescript-coverage-report",
-		"update:check": "bun x npm-check-updates"
+		"update:check": "bunx npm-check-updates",
+		"update:install": "bunx npm-check-updates --deep -u && bun install"
 	},
 	"sideEffects": false,
 	"type": "module",
-	"version": "0.0.1"
+	"version": "0.0.1",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	]
 }

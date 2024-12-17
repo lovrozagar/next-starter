@@ -1,3 +1,4 @@
+import { ROOT_LAYOUT_METADATA } from "@/app/(route)/seo/metadata"
 import { TopLoaderDynamic } from "@/components/top-loader"
 import "@/style/globals.css"
 
@@ -19,5 +20,11 @@ function RootLayout(props: RootLayoutProps) {
 		</html>
 	)
 }
+
+function generateMetadata() {
+	return ROOT_LAYOUT_METADATA
+}
+
+export { generateMetadata }
 
 export default RootLayout
